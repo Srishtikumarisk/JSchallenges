@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>
+      Playing with colors
+    </title>
+    <style>
+      #colour {
+        background-color: #ac1010;
+        height: 50px;
+        width: 110px;
+        border-radius: 12px;
+        color: white;
+        font-style: strong;
+      }
+      body {
+        background-color: #ffccf2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="styleing" style="margin-top: 300px;margin-left:550px; ">
+      <button id="colour">changecolor</button>
+    </div>
+    <script type="text/javascript">
+      var color = [
+        "#ff9999",
+        "#99ff99",
+        "#ccf2ff",
+        "#222f3e",
+        "#ee5253",
+        "#0abde3",
+        "#10ac84",
+        "#222f3e",
+        "#5f27cd"
+      ];
+      var i = 0;
+      document.querySelector("button").addEventListener("click", function() {
+        i = 1 < color.length ? ++i : 0;
+        document.querySelector("body").style.background = color[i];
+        document.querySelector("button").style.backgroundColor = color[i + 1];
+      });
+    </script>
+  </body>
+</html>
